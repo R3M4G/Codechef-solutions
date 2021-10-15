@@ -1,5 +1,4 @@
 package main
-
 import (
 	"fmt"
 )
@@ -7,11 +6,10 @@ import (
 func main() {
 	var i int
 	var j float64
-	fmt.Scanln(&i,&j)
-	if i % 5 == 0 && i < int(j) {
-		fmt.Println((j-float64(i))-0.50)
+	fmt.Scan(&i,&j)
+	if i % 5 != 0 && j < (float64(i)+0.5) {
+		fmt.Printf("%.2f\n",j)		
 	} else {
-		fmt.Printf("%.2f",j)
+		fmt.Printf("%.2f\n", j-(float64(i)+0.5))
 	}
 }
-
